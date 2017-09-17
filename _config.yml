@@ -1,6 +1,6 @@
 # Site settings
 title: Ásbrú Connection Manager
-description: Free and open *nix connection manager
+description: A free and open-source connection manager
 
 exclude: ['docs/', 'lib/', 'scripts/']
 navbar: true
