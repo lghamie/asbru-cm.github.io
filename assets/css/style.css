@@ -1,22 +1,43 @@
+a {
+  color: #455164;
+}
+
+
+code {
+  font-family: Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  padding: 0;
+  color: white;
+  background: transparent;
+  border-radius: 0;
+  font-size: inherit;
+}
+
+.code-block {
+  border-left: 8px solid #2C8EBB;
+  padding: 12px 24px;
+  background: #292b2c;
+  border-radius: 4px;
+}
+
 .copyright-col {
-    text-align: center;
+  text-align: center;
 }
 
 .logo {
-    vertical-align: middle;
-    display: inline-block;
+  vertical-align: middle;
+  display: inline-block;
 }
 
 .intro {
-    font-size: 2em;
-    font-weight: bold;
-    text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
 }
 
 .text-primary {
-	color: #455164;
+  color: #455164;
 }
 
 .service-heading {
-	color: #455164;
+  color: #455164;
 }
