@@ -1,9 +1,64 @@
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-<script
-  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
-  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
-  crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
 
 <!-- Bootstrap Core JavaScript -->
 <script src="/assets/js/bootstrap.min.js"></script>
 <script src="/assets/js/agency.js"></script>
+
+<!-- Copy screenshot image alt -->
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.screenshot img').each(function (i, item) {
+      $(item).parent().append('<div class="title">' + $(item).attr('alt') + '</div>');
+    });
+  });
+</script>
+
+
+<!-- slick -->
+<script src="/assets/lib/slick/slick.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.screenshots').slick({
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      dots: true,
+      arrows: true,
+      infinite: false,
+
+      responsive: [{
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+          arrows: false
+        }
+      }]
+    });
+  });
+</script>
+
+<!-- colorbox -->
+<script src="/assets/lib/colorbox/jquery.colorbox-min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    var s = $('.screenshot').colorbox({
+      inline: true,
+      rel: '.screenshot img',
+      href: function () {
+        return $(this).children('img');
+      },
+      title: function () {
+        return $(this).children('.title').text();
+      },
+      width:'75%',
+      height:'75%',
+      scalePhotos: true
+    });
+    $('#screenshot-zoom').click(function (e) {
+      e.preventDefault();
+      s.eq(0).click();
+    });
+  });
+</script>

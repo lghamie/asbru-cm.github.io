@@ -2,6 +2,12 @@ a {
   color: #455164;
 }
 
+section {
+  padding: 0;
+}
+section#main {
+  padding-top: 100px;
+}
 
 code {
   font-family: Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
@@ -40,4 +46,64 @@ code {
 
 .service-heading {
   color: #455164;
+}
+
+section#screenshots {
+  padding-top: 30px;
+}
+
+.screenshots {
+  display: none;
+  margin: 0 25px;
+}
+
+.screenshots div {
+}
+.screenshots div img {
+  height: 400px;
+}
+
+.slick-prev::before,
+.slick-next::before {
+  font-size: 35px !important;
+  color: #333 !important;
+}
+.slick-prev,
+.slick-next {
+  width: 30px !important;
+  height: 30px !important;
+}
+.slick-prev {
+  left: -37px !important;
+}
+
+@media (max-width: 1200px) {
+  .screenshots div img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 800px) {
+  .screenshots {
+    margin: 0;
+  }
+  .screenshots div img {
+    height: 200px;
+  }
+}
+
+#screenshot-zoom {
+  margin-left: 30px;
+  padding: 0 5px;
+  cursor: pointer;
+}
+#screenshot-zoom:hover {
+  color: white;
+  background-color: #333;
+  border-radius: 6px;
+}
+
+#cboxLoadedContent img {
+  max-width: 100%;
+  max-height: 100%;
 }
