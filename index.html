@@ -6,16 +6,22 @@ layout: default
     <div class="row animated fadeIn">
       <div class="col-md-4">
         <p style="text-align: center;"><img style="width: 240px;" src="assets/img/asbru-logo.svg" alt="Ásbrú Connection Manager"/></p>
+        <p style="text-align: center; margin-top: 20px;"><i>Ásbrú Connection Manager</i> is a user interface that helps organizing remote terminal sessions and automating repetitive tasks.</p>
       </div>
       <div class="col-md-8">
-        <h2>About</h2>
-        <p><i>Ásbrú Connection Manager</i> is a user interface that helps organizing remote terminal sessions and automating repetitive tasks.</p>
         <h2>Install instructions</h2>
         <h3>Debian / Ubuntu</h3>
         <div class="code-block">
           <code>
             curl -s https://packagecloud.io/install/repositories/asbru-cm/asbru-cm/script.deb.sh | sudo bash<br>
             sudo apt-get install asbru-cm
+          </code>
+        </div>
+        <h3>Fedora</h3>
+        <div class="code-block">
+          <code>
+            curl -s https://packagecloud.io/install/repositories/asbru-cm/asbru-cm/script.rpm.sh | sudo bash<br>
+            sudo dnf install asbru-cm
           </code>
         </div>
       </div>
